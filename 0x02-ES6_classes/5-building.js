@@ -1,16 +1,16 @@
 export default class Building {
-  constructor(sdft) {
-    this._sdft = sdft;
+  constructor(sqft) {
+    this._sqft = sqft;
     this.evacuationWarningMessage();
   }
 
   // Getter and setter for the element
-  get sdft() {
-    return this._sdft;
+  get sqft() {
+    return this._sqft;
   }
 
-  set sdft(value) {
-    this._sdft = value;
+  set sqft(value) {
+    this._sqft = value;
   }
 
   // If class extends, override

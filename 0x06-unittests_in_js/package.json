@@ -2,13 +2,17 @@
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
   "description": "Solutions to UNITTESTS in JS tasks",
-  "main": "*.js",
-  "scripts": {
-    "test": "mocha '*.test.js'"
+  "main": "0-calcul.js",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "esm": "^3.2.25"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "mocha": "^10.3.0"
-  }
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
 }

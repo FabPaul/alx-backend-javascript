@@ -49,8 +49,8 @@ const {
     });
   
     it('make sure of error body content with non number id', () => {
-      request('http://localhost:7865/cart/jess', (_error, _response, body) => {
-        expect(body).to.contain('Cannot GET /cart/jess');
+      request('http://localhost:7865/cart/jes', (_error, _response, body) => {
+        expect(body).to.contain('Cannot GET /cart/jes');
       });
     });
   

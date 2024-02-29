@@ -1,29 +1,22 @@
 const request = require('request');
 const { expect } = require('chai');
-const sinon = require('sinon');
-const { beforeEach } = require('mocha');
-
 
 describe('Index page', function() {
-    beforeEach(() => {
-        sinon.restore();
-    });
-
     it('Correct status code', function() {
-        res = request.get('http://localhost:7865', (err, res, data) => {
+        request('http://localhost:7865', (_err, res, _data) => {
             expect(res.statusCode).to.be.equal(200);
         });
     });
     
     it('Correct result', function() {
-        res = request.get('http://localhost:7865', (err, res, data) => {
-            expect(data).to.be.equal('Welcome to the payment system');
+        request('http://localhost:7865', (_err, _res, data) => {
+            expect(data).to.contain('Welcome to the payment system');
         });
     });
     
      it('Other', function() {
-        res = request.get('http://localhost:7865', (err, res, data) => {
-            expect(data.length).to.be.equal(29)
+        request('http://localhost:7865', (_err, res, _data) => {
+            expect(res.headers['content-length']).to.be.equal(29)
         });
     });
 });

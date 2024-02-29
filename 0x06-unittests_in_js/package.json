@@ -4,10 +4,10 @@
   "description": "Solutions to UNITTESTS in JS tasks",
   "main": "0-calcul.js",
   "dependencies": {
-    "chai": "^5.1.0",
     "esm": "^3.2.25"
   },
   "devDependencies": {
+    "chai": "^5.1.0",
     "mocha": "^10.3.0"
   },
   "scripts": {

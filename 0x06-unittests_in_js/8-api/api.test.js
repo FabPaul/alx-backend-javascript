@@ -16,16 +16,15 @@ const {
       });
     });
   
+    it('make sure of correct content length', () => {
+        request('http://localhost:7865', (_err, res, _body) => {
+          expect(res.headers['content-length']).to.equal('29');
+       });
+    });
+
     it('make sure of correct content type', () => {
       request('http://localhost:7865', (_err, res, _body) => {
         expect(res.headers['content-type']).to.equal('text/html; charset=utf-8');
       });
-    });
-  
-    it('make sure of correct content length', () => {
-      request('http://localhost:7865', (_err, res, _body) => {
-        expect(res.headers['content-length']).to.equal('29');
-      });
-    });
-  
+    }); 
   });

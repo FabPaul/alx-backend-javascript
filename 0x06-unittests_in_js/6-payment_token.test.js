@@ -13,5 +13,5 @@ describe('getPaymentTokenFromAPI', function() {
             expect(data).to.have.property('data');
         });
         done();
-    })
-})
+    });
+});

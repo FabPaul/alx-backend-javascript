@@ -48,6 +48,12 @@ const {
       });
     });
   
+    it('make sure of error body content with non number id', () => {
+      request('http://localhost:7865/cart/jess', (_error, _response, body) => {
+        expect(body).to.contain('Cannot GET /cart/jess');
+      });
+    });
+  
     it('make sure of correct content type', () => {
       request('http://localhost:7865/cart/12', (_err, res, _body) => {
         expect(res.headers['content-type']).to.equal('text/html; charset=utf-8');

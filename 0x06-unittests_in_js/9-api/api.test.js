@@ -65,5 +65,4 @@ const {
         expect(res.headers['content-length']).to.equal('27');
       });
     });
-  
   });

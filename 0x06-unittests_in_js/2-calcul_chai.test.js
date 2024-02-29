@@ -1,6 +1,8 @@
 // Tests
-const calculateNumber = require('./2-calcul_chai.js');
-const { expect } = require('chai');
+const assert = require('assert');
+const chai = require('chai');
+const expect = chai.expect;
+const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber of type SUM', function () {
     it('rounded sum of 2 numbers integers', function () {

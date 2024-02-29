@@ -15,18 +15,12 @@ describe('Index page', function() {
 
     it('Test Correct status code when :id is a number', function() {
         res = request.get('http://localhost:7865/cart/12', (err, res, data) => {
-          expect(data).to.be.equal(`Payment methods for cart ${45}`);
-        });
-      });
-    
-      it('Test Correct status code when :id is a number', function() {
-        res = request.get('http://localhost:7865/cart/12', (err, res, data) => {
-          expect(res.statusCode).to.be.equal(200);
+          expect(data).to.be.equal(`Payment methods for cart ${12}`);
         });
       });
     
       it('Test aCorrect status code when :id is a decimal', function() {
-        res = request.get('http://localhost:7865/cart/45.4', (err, res, data) => {
+        res = request.get('http://localhost:7865/cart/12.5', (err, res, data) => {
           expect(res.statusCode).to.be.equal(404);
         });
       });

@@ -12,7 +12,7 @@ describe('Index page', function() {
             expect(data).to.be.equal('Welcome to the payment system');
         });
     });
-
+    
      it('Other', function() {
         res = request.get('http://localhost:7865', (err, res, data) => {
             expect(data.length).to.be.equal(29)

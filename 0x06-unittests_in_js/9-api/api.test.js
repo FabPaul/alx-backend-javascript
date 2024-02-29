@@ -50,7 +50,7 @@ const {
   
     it('make sure of error body content with non number id', () => {
       request('http://localhost:7865/cart/jes', (_error, _response, body) => {
-        expect(response.statusCode).to.equal(404);
+        expect(body).to.contain('Cannot GET /cart/jes');
       });
     });
   

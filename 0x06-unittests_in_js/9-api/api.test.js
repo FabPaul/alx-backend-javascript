@@ -12,9 +12,7 @@ describe('Index page', function() {
             expect(data).to.be.equal('Welcome to the payment system');
         });
     });
-});
 
-describe('ID cart tests', function() {
     it('Test Correct status code when :id is a number', function() {
         res = request.get('http://localhost:7865/cart/12', (err, res, data) => {
           expect(data).to.be.equal(`Payment methods for cart ${45}`);

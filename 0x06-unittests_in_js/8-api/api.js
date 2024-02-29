@@ -3,9 +3,9 @@ const app = express();
 
 const port = 7865
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
     res.statusCode = 200;
-    res.send('Welcome to thr payment system');
+    res.send('Welcome to the payment system');
 });
 
 app.listen(port, () => {
